@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main()
+{
+    int yukseklik;
+    
+    do{
+        printf("yukseklik: ");
+        scanf("%d",&yukseklik);
+    }
+    while(yukseklik<1 || yukseklik>8);
+    
+    int bosluk = yukseklik - 1;
+    
+    for(int i = 0; i < yukseklik; i++)
+    {
+        for(int j = 0; j < bosluk; j++)
+        {
+            printf(" ");
+        }
+        bosluk--;
+        
+        for(int k = 0; k <= i; k++)
+        {
+            printf("#");
+        }
+        
+        printf("  ");
+        
+        for(int m = 0; m <= i; m++)
+        {
+            printf("#");
+        }
+        
+        printf("\n");
+    }
+
+    return 0;
+}
+
+/* 
+
+Ekran Çıktısı:
+
+    #  #
+   ##  ##
+  ###  ###
+ ####  ####
+#####  #####
+
+
+*/
