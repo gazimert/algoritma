@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner girdi = new Scanner(System.in);
+        System.out.print("Yükseklik Giriniz: ");
+	      int yukseklik = girdi.nextInt();
+        int taban = 1;
+        int bosluk = yukseklik - 1;
+
+        for (int i = 0; i < yukseklik; i++) {
+            for (int j = 0; j < bosluk; j++) {
+                System.out.print(" ");
+            }
+            bosluk--;
+
+            for (int j = 0; j < taban; j++) {
+                System.out.print("*");
+            }
+            taban += 2;
+            System.out.println();
+        }
+    }
+}
+
+
+Ekran Çıktısı:
+
+Yükseklik Giriniz: 10
+         *
+        ***
+       *****
+      *******
+     *********
+    ***********
+   *************
+  ***************
+ *****************
+*******************
