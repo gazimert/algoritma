@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	    /*Scanner klavye = new Scanner(System.in);
+        System.out.println("Bir sayı giriniz: ");
+        int sayi = klavye.nextInt();
+        int temp = sayi;
+        int temp2 =(int) (Math.pow(sayi,2));
+
+        int yeni_sayi = 0,basamak = 0,kalan = 0,kalan2=0,yenisayi2=0,kalan3=0;
+
+        while (temp > 0){
+            kalan = temp % 10;
+            basamak++;
+            temp = (temp-kalan)/10;
+        }
+
+        for (int i = 0; i < basamak; i++) {
+            kalan2 = temp2 % 10;
+            yeni_sayi = (yeni_sayi * 10) + kalan2;
+            temp2 = (temp2-kalan2)/10;
+        }
+
+        while (yeni_sayi > 0){
+            kalan3 = yeni_sayi % 10;
+            yenisayi2=(yenisayi2 * 10) + kalan3;
+            yeni_sayi = (yeni_sayi-kalan3)/10;
+        }
+
+        System.out.println(sayi);
+
+        if (sayi == yenisayi2){
+            System.out.println("otomorfik sayıdır.");
+        }
+        else{
+            System.out.println("otomorfik sayı değildir.");
+        }*/
+
+        Scanner klavye = new Scanner(System.in);
+        int sayi = klavye.nextInt();
+
+        int kare =(int) (Math.pow(sayi,2));
+
+        if ((kare - sayi) % 10 == 0) {
+            System.out.println("otomorfik");
+        }
+        else{
+            System.out.println("değil");
+        }
+
+    }
+}
