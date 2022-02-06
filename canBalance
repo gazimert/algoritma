@@ -1,0 +1,32 @@
+public class Main {
+
+    public static void main(String[] args) {
+    // boş olmayan bir dizimiz olsun eğer bu diziyi herhangi bir noktasından ikiye böldüğümüzde soldaki sayıların toplamı
+    // sağdaki sayıların toplamına eşit olabiliyorsa true döndür
+
+        int[] dizi = {1,1,1,2,1};
+
+        System.out.println(canBalance(dizi));
+    }
+
+    static boolean canBalance(int[] dizi){
+        int toplami = 0;
+        int toplamj = 0;
+        for (int i = 0; i < dizi.length-1; i++) {
+            toplami += dizi[i];
+            for (int j = i+1; j < dizi.length; j++) {
+                toplamj += dizi[j];
+            }
+            if (toplami == toplamj)
+                return true;
+            toplamj = 0;
+        }
+
+        return false;
+    }
+}
+
+
+Ekran Çıktısı:
+
+True
