@@ -1,0 +1,38 @@
+public class Main {
+
+    //Bir dizi yan yana 2 içeriyorsa true döndür
+
+    public static void main(String[] args) {
+	    int[] dizi = new int[5];
+
+        for (int i = 0; i < dizi.length; i++) {
+            dizi[i] = (int) (Math.random()*2+1);
+        }
+
+        for (int i = 0; i < dizi.length; i++) {
+            System.out.print(dizi[i] + " ");
+        }
+        System.out.println();
+        System.out.println(has22(dizi));
+    }
+
+    static boolean has22(int[] a){
+        for (int i = 1; i < a.length; i++) {
+            if (a[i-1] == 2){
+                if (a[i] == 2){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+
+
+Ekran Çıktısı:
+
+2 2 1 2 1 
+true
+
+1 2 1 1 2 
+false
