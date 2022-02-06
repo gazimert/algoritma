@@ -1,0 +1,33 @@
+public class Main {
+
+    public static void main(String[] args) {
+	    //bir dizide 10 un katı olan bir sayı bulduğunda bu sayıdan sonraki sayıları hep o sayıya eşitle
+        //ta ki 10 un katı olan başka bir sayı bulana kadar
+
+        int[] dizi = {1,3,10,2,20,70,34,20,4,5,9};
+
+        for (int sayi:dizi){
+            System.out.print(sayi + " ");
+        }
+
+        for (int i = 0; i < dizi.length-1; i++) {
+            if (dizi[i] % 10 == 0){
+                if (dizi[i+1] % 10 != 0){
+                    dizi[i+1] = dizi[i];
+                }
+            }
+        }
+        System.out.println();
+
+        for (int sayi:dizi){
+            System.out.print(sayi + " ");
+        }
+    }
+}
+
+
+
+Ekran Çıktısı:
+
+1 3 10 2 20 70 34 20 4 5 9 
+1 3 10 10 20 70 70 20 20 20 20 
