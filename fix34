@@ -1,0 +1,42 @@
+public class Main {
+
+    public static void main(String[] args) {
+    // Bir dizide eşit sayıda 3 ve 4 olsun 
+    // elemanları her 3 ün ardından 4 olacak şekilde yeniden düzenle
+
+        int[] dizi = {1,3,1,4,4,3,1};
+        for (int sayi:dizi){
+            System.out.print(sayi + " ");
+        }
+
+        int[] yeniDizi = fix34(dizi);
+
+        System.out.println();
+
+        for (int sayi:yeniDizi){
+            System.out.print(sayi + " ");
+        }
+    }
+
+    static int[] fix34(int[] dizi){
+        int temp;
+        for (int i = 0; i < dizi.length-1; i++) {
+            for (int j = 1; j < dizi.length; j++) {
+                if (dizi[i] == 3 && dizi[i+1] != 4){
+                    if (dizi[j] == 4 && dizi[j-1] != 3){
+                        temp = dizi[i+1];
+                        dizi[i+1] = dizi[j];
+                        dizi[j] = temp;
+                    }
+                }
+            }
+        }
+        return dizi;
+    }
+}
+
+
+Ekran Çıktısı:
+
+1 3 1 4 4 3 1 
+1 3 4 1 1 3 4 
