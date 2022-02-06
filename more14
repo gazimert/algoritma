@@ -1,0 +1,23 @@
+public class Main {
+
+    public static void main(String[] args) {
+        int[] dizi = {1,1,4,4,1};
+        System.out.println(more14(dizi));
+    }
+
+    static boolean more14(int[] nums){
+        int sayac1 = 0 , sayac4 = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1)
+                sayac1++;
+            else
+                sayac4++;
+        }
+
+        if (sayac4 < sayac1)
+            return true;
+        else
+            return false;
+    }
+}
