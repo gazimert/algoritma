@@ -1,0 +1,41 @@
+public class Main {
+
+    public static void main(String[] args) {
+        //başlangıç ve bitiş değerleri arasındaki sayıları String türündeki dizide saklayacağız
+        //fakat 3 ün katı ise "Fizz", 5 in katı ise "Buzz", 15 in katı ise "FizzBuzz" yaz
+
+        String[] dizi = fizzBuzz(5,16);
+
+        for (String eleman:dizi){
+            System.out.print(eleman + " ");
+        }
+    }
+
+    static String[] fizzBuzz(int start,int end){
+        String[] dizi = new String[end-start];
+        int n = start;
+
+        for (int i = 0; i < dizi.length; i++) {
+            if (n % 15 == 0){
+                dizi[i] = "FizzBuzz";
+            }
+            else if (n % 5 == 0){
+                dizi[i] = "Buzz";
+            }
+            else if (n % 3 == 0){
+                dizi[i] = "Fizz";
+            }
+            else {
+                dizi[i] = "" + n;
+            }
+            n++;
+        }
+
+        return dizi;
+    }
+}
+
+
+Ekran Çıktısı:
+
+Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz
