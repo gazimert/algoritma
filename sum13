@@ -1,0 +1,20 @@
+public class Main {
+    //dizide 13 ve sonraki elemanı toplamaya dahil etme
+
+    public static void main(String[] args) {
+	    int[] dizi = {2,5,4,13,7,16};
+        metot(dizi);
+    }
+
+    static void metot(int[] a){
+        int toplam = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == 13){
+                i++;
+                continue;
+            }
+            toplam += a[i];
+        }
+        System.out.println(toplam);
+    }
+}
